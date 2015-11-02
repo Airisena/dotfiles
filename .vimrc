@@ -46,3 +46,12 @@ nnoremap sH <C-w>H
 
 filetype on
 autocmd BufNewFile,BufReadPost *.ino,*.pde set filetype=cpp
+
+"if has('persistent_undo')
+"    set undodir=~/.vim/undo
+"    set undofile
+"endif
+
+"if has("autocmd")
+"    au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+"endif
