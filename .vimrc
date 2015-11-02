@@ -55,3 +55,10 @@ autocmd BufNewFile,BufReadPost *.ino,*.pde set filetype=cpp
 "if has("autocmd")
 "    au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 "endif
+
+imap {} {}<left>
+imap [] []<left>
+imap () ()<left>
+imap "" ""<left>
+imap '' ''<left>
+imap <> <><left>
