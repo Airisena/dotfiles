@@ -35,3 +35,11 @@ nnoremap <C-l> <C-w>l
 syntax on
 
 set cursorline
+
+nnoremap ss :<C-u>sp<CR>
+nnoremap sv :<C-u>vs<CR>
+
+nnoremap sJ <C-w>J
+nnoremap sK <C-w>K
+nnoremap sL <C-w>L
+nnoremap sH <C-w>H
