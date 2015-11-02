@@ -43,3 +43,6 @@ nnoremap sJ <C-w>J
 nnoremap sK <C-w>K
 nnoremap sL <C-w>L
 nnoremap sH <C-w>H
+
+filetype on
+autocmd BufNewFile,BufReadPost *.ino,*.pde set filetype=cpp
