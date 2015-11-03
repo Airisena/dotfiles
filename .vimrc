@@ -9,7 +9,6 @@ set tabstop=4
 set smarttab
 set shiftwidth=4
 set noexpandtab
-set expandtab
 set softtabstop=4
 
 set laststatus=2
