@@ -33,10 +33,11 @@ nnoremap <C-l> <C-w>l
 
 syntax on
 
+set nohlsearch
 set cursorline
 
-nnoremap ss :<C-u>sp<CR>
-nnoremap sv :<C-u>vs<CR>
+"nnoremap ss :<C-u>sp<CR>
+"nnoremap sv :<C-u>vs<CR>
 
 nnoremap sJ <C-w>J
 nnoremap sK <C-w>K
@@ -61,3 +62,16 @@ imap () ()<left>
 imap "" ""<left>
 imap '' ''<left>
 imap <> <><left>
+
+"autocmd FileType c,cpp syntax match CFunction /[a-zA-Z_]\w*(\@=/
+"autocmd FileType c,cpp hi CFunction ctermfg=darkcyan
+
+"syntax match CFunction /[a-zA-Z_]\w*\s*\(\(\[[^]]*\]\s*\)\?(\s*[^\*]\)\@=/
+"syntax match CFunction /\*\s*[a-zA-Z_]\w*\s*\(\(\[\]\s*\)\?)\s*(\)\@=/
+"hi CFunction guifg=#ff0000 guibg=#ffff00 
+
+colorscheme peachpuff
+
+set incsearch
+set wildmenu wildmode=list:full
+
