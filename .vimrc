@@ -58,7 +58,7 @@ autocmd BufNewFile,BufReadPost *.ino,*.pde set filetype=cpp
 
 imap {} {}<left>
 imap [] []<left>
-imap () ()<left>
+"imap () ()<left>
 imap "" ""<left>
 imap '' ''<left>
 imap <> <><left>
