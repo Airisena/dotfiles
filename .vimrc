@@ -75,3 +75,5 @@ colorscheme peachpuff
 set incsearch
 set wildmenu wildmode=list:full
 
+autocmd BufWinLeave ?* silent mkview
+autocmd BufWinEnter ?* silent loadview
