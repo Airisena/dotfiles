@@ -1,5 +1,5 @@
 set autoindent
-set smartindent
+"set smartindent
 set title
 set number
 set nowrap
