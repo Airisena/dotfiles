@@ -70,7 +70,7 @@ imap <> <><left>
 "syntax match CFunction /\*\s*[a-zA-Z_]\w*\s*\(\(\[\]\s*\)\?)\s*(\)\@=/
 "hi CFunction guifg=#ff0000 guibg=#ffff00 
 
-colorscheme peachpuff
+"colorscheme peachpuff
 
 set incsearch
 set wildmenu wildmode=list:full
@@ -79,3 +79,18 @@ hi Comment ctermfg=gray
 
 autocmd BufWinLeave ?* silent mkview
 autocmd BufWinEnter ?* silent loadview
+
+if has('vim_starting')
+	set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
+
+		call neobundle#begin(expand('~/.vim/bundle/'))
+
+		NeoBundle 'Shougo/unite.vim'
+		NeoBundle 'Shougo/vimfiler'
+
+		NeoBundle 'morhetz/gruvbox'
+
+		call neobundle#end()
+
+		filetype plugin indent on
