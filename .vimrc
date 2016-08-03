@@ -1,30 +1,30 @@
-set autoindent
-"set smartindent
-set title
-set number
-set nowrap
-set autoread
+set autoindent "to continue the indent of the previous line at the time of a indent
+"set smartindent "
+set title "display of title in window frame
+set number "display of line number
+set nowrap "disable the return of the screen end of the-row
+set autoread "re-read the case that has been edited in an external
 
-set tabstop=4
-set smarttab
-set shiftwidth=4
-set noexpandtab
-set softtabstop=4
+set tabstop=4 "specifies the width of the tab
+set smarttab "tab width of the beginning of line
+set shiftwidth=4 "amount of the inserted space by autoindent
+set noexpandtab "expandtab is insert a space instead of tab
+set softtabstop=4 "amount of the inserted space by expandtab
 
-set laststatus=2
+set laststatus=2 "always display the status line
 
-set encoding=utf-8
-set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
-set fileformats=unix,dos,mac
+set encoding=utf-8 "setting of internal character code
+set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8 "setting the character code at the time of writing files
+set fileformats=unix,dos,mac "automatic recognition of the line feed code
 
-set list
-set listchars=tab:>-,trail:_,eol:$,extends:>,precedes:<,nbsp:%
+set list "display of the tab and indentation
+set listchars=tab:>-,trail:_,eol:$,extends:>,precedes:<,nbsp:% "customize
 
-set showmatch
+set showmatch "display the corresponding brackets and braces
 
-set ignorecase
-set smartcase
-set wrapscan
+set ignorecase "case-insensitive search
+set smartcase "lower case -> ignored, large case -> normal search
+set wrapscan "
 
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
