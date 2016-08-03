@@ -24,6 +24,7 @@ set showmatch "display the corresponding brackets and braces
 
 set ignorecase "case-insensitive search
 set smartcase "lower case -> ignored, large case -> normal search
+set matchtime=2
 set wrapscan "
 
 nnoremap <C-h> <C-w>h
