@@ -88,3 +88,5 @@ autocmd BufWinEnter ?* silent loadview
 
 set confirm
 set hidden
+
+set foldmethod=marker "folding of the line
