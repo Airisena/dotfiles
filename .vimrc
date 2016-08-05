@@ -92,3 +92,7 @@ set hidden
 set foldmethod=marker "folding of the line
 
 nnoremap ; :
+
+ab nt tabnew
+nnoremap <S-Left> gT
+nnoremap <S-Right> gt
