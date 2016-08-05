@@ -90,3 +90,5 @@ set confirm
 set hidden
 
 set foldmethod=marker "folding of the line
+
+nnoremap ; :
