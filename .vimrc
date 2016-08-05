@@ -81,11 +81,10 @@ hi Comment ctermfg=gray
 autocmd BufWinLeave ?* silent mkview
 autocmd BufWinEnter ?* silent loadview
 
-nnoremap <C-s> <C-w>s
-nnoremap <C-v> <C-w>v
-nnoremap <C-o> <C-w>o
-nnoremap <C-r> <C-w>r
+"nnoremap <C-s> <C-w>s
+"nnoremap <C-v> <C-w>v
+"nnoremap <C-o> <C-w>o
+"nnoremap <C-r> <C-w>r
 
 set confirm
 set hidden
-
