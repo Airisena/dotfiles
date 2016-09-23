@@ -11,7 +11,7 @@ set shiftwidth=4 "amount of the inserted space by autoindent
 set noexpandtab "expandtab is insert a space instead of tab
 set softtabstop=4 "amount of the inserted space by expandtab
 
-set laststatus=3 "always display the status line
+set laststatus=2 "always display the status line
 
 set encoding=utf-8 "setting of internal character code
 set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8 "setting the character code at the time of writing files
@@ -27,23 +27,35 @@ set smartcase "lower case -> ignored, large case -> normal search
 set matchtime=2
 set wrapscan "
 
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
 
 syntax on
 
 set nohlsearch
 set cursorline
 
+" screen split
 "nnoremap ss :<C-u>sp<CR>
 "nnoremap sv :<C-u>vs<CR>
 
+" to move between the split window
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+" to move the split window itself
 nnoremap sJ <C-w>J
 nnoremap sK <C-w>K
 nnoremap sL <C-w>L
 nnoremap sH <C-w>H
+
+"<C-w>_ " maximize the height
+"<C-w>| " maximize the width
+"<C-w>= " align the size
+"<C-w>> " width +
+"<C-w>< " width -
+"<C-w>+ " heigth +
+"<C-w>- " heigth -
 
 filetype on
 autocmd BufNewFile,BufReadPost *.ino,*.pde set filetype=cpp
@@ -93,6 +105,7 @@ set foldmethod=marker "folding of the line
 
 nnoremap ; :
 
+" tab
 ab nt tabnew
 nnoremap <S-Left> gT
 nnoremap <S-Right> gt
