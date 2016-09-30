@@ -101,7 +101,14 @@ autocmd BufWinEnter ?* silent loadview
 set confirm
 set hidden
 
-set foldmethod=marker "folding of the line
+set foldmethod=marker "folding of the line /*{{{*/ /*}}}*/
+"zf -> fold
+"zo -> open
+"zc -> close
+"zr -> all open
+"zn -> unavailable
+"zi -> switching
+"set foldcolumn=4
 
 nnoremap ; :
 
