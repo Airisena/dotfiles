@@ -103,12 +103,14 @@ set hidden
 
 set foldmethod=marker "folding of the line /*{{{*/ /*}}}*/
 "zf -> fold
+"zd -> del
 "zo -> open
 "zc -> close
 "zr -> all open
 "zn -> unavailable
-"zi -> switching
+"zi -> on/off switching
 "set foldcolumn=4
+"set fdc=4
 
 nnoremap ; :
 
