@@ -118,3 +118,8 @@ nnoremap ; :
 ab nt tabnew
 nnoremap <S-Left> gT
 nnoremap <S-Right> gt
+
+" remenber undo
+set undodir=~/.vim/undodir
+set undofile
+" g-/g+
