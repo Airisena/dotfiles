@@ -123,3 +123,6 @@ nnoremap <S-Right> gt
 set undodir=~/.vim/undodir
 set undofile
 " g-/g+
+
+"save by sudo
+cabbr w!! w !sudo tee > /dev/null %
