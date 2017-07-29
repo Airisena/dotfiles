@@ -126,3 +126,19 @@ set undofile
 
 "save by sudo
 cabbr w!! w !sudo tee > /dev/null %
+
+" install pulgin manager ->
+" $curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+" pulgin manager
+" install -> reboot vim after command :PlugInstall
+" disable -> comment out
+" delete -> command :PlugClean
+" Plugin update -> command :PlugUpdate
+call plug#begin('~/.vim/plugged')
+" write here, install plugin
+
+" Program language Rust
+Plug 'rust-lang/rust.vim'
+Plug 'racer-rust/vim-racer'
+
+call plug#end()
