@@ -180,6 +180,9 @@ let g:lightline = {
 		\ 'subseparator': {'left': "\u2b81", 'right': "\u2b83"}
 		\ }
 
+let g:lightline.component = {
+	\ 'lineinfo': '%3l[%L]:%-2v'}
+
 function! LightlineModified()
 	return &ft =~ 'help\|vimfiler\|gundo' ? '' : &modified ? '+' : &modifiable ? '' : '-'
 endfunction
