@@ -143,6 +143,8 @@ Plug 'rust-lang/rust.vim'
 Plug 'racer-rust/vim-racer'
 " http://itchyny.hatenablog.com/entry/20130828/1377653592
 Plug 'itchyny/lightline.vim'
+Plug 'Shougo/unite.vim'
+Plug 'Shougo/vimfiler'
 
 call plug#end()
 
