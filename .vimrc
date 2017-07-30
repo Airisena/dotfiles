@@ -157,6 +157,8 @@ Plug 'racer-rust/vim-racer'
 Plug 'itchyny/lightline.vim'
 Plug 'Shougo/unite.vim'
 Plug 'Shougo/vimfiler'
+" color code view
+Plug 'lilydjwg/colorizer'
 
 call plug#end()
 
