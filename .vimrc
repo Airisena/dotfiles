@@ -12,7 +12,10 @@ set noexpandtab "expandtab is insert a space instead of tab
 set softtabstop=4 "amount of the inserted space by expandtab
 
 set laststatus=2 "always display the status line
-set t_Co=256
+
+if !has('gui_running')
+	set t_Co=256
+endif
 
 set encoding=utf-8 "setting of internal character code
 set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8 "setting the character code at the time of writing files
