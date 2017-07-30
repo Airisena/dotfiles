@@ -136,7 +136,6 @@ cabbr w!! w !sudo tee > /dev/null %
 " font
 " http://d.hatena.ne.jp/akishin999/20130928/1380373262
 scriptencoding utf-8
-set encoding=utf-8
 "set guifont=Ricty\ 10
 set guifont=Ricty\ for\ Powerline:h18
 
