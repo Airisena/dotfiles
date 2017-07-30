@@ -133,6 +133,13 @@ set undofile
 "save by sudo
 cabbr w!! w !sudo tee > /dev/null %
 
+" font
+" http://d.hatena.ne.jp/akishin999/20130928/1380373262
+scriptencoding utf-8
+set encoding=utf-8
+"set guifont=Ricty\ 10
+set guifont=Ricty\ for\ Powerline:h18
+
 " install pulgin manager ->
 " $curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 " pulgin manager
@@ -168,7 +175,9 @@ let g:lightline = {
 		\   'filetype': 'LightlineFiletype',
 		\   'fileencoding': 'LightlineFileencoding',
 		\   'mode': 'LightlineMode'
-		\ }
+		\ },
+		\ 'separator': {'left': "\u2b80", 'right': "\u2b82"},
+		\ 'subseparator': {'left': "\u2b81", 'right': "\u2b83"}
 		\ }
 
 function! LightlineModified()
