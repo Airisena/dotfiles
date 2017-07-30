@@ -17,6 +17,8 @@ if !has('gui_running')
 	set t_Co=256
 endif
 
+set noshowmode
+
 set encoding=utf-8 "setting of internal character code
 set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8 "setting the character code at the time of writing files
 set fileformats=unix,dos,mac "automatic recognition of the line feed code
