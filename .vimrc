@@ -35,7 +35,8 @@ set wrapscan "
 
 set ambiwidth=double
 
-syntax on
+"syntax on
+syntax enable
 
 set nohlsearch
 set cursorline
@@ -160,75 +161,9 @@ call plug#begin('~/.vim/plugged')
 " Program language Rust
 Plug 'rust-lang/rust.vim'
 Plug 'racer-rust/vim-racer'
-" http://itchyny.hatenablog.com/entry/20130828/1377653592
-Plug 'itchyny/lightline.vim'
 Plug 'Shougo/unite.vim'
 Plug 'Shougo/vimfiler'
 " color code view
 "Plug 'lilydjwg/colorizer'
 
 call plug#end()
-
-let g:lightline = {
-		\ 'colorscheme': 'wombat',
-		\ 'mode_map': {'c': 'NORMAL'},
-		\ 'active': {
-		\   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ] ]
-		\ },
-		\ 'component_function': {
-		\   'modified': 'LightlineModified',
-		\   'readonly': 'LightlineReadonly',
-		\   'fugitive': 'LightlineFugitive',
-		\   'filename': 'LightlineFilename',
-		\   'fileformat': 'LightlineFileformat',
-		\   'filetype': 'LightlineFiletype',
-		\   'fileencoding': 'LightlineFileencoding',
-		\   'mode': 'LightlineMode'
-		\ },
-		\ 'separator': {'left': "\u2b80", 'right': "\u2b82"},
-		\ 'subseparator': {'left': "\u2b81", 'right': "\u2b83"}
-		\ }
-
-let g:lightline.component = {
-	\ 'lineinfo': '%3l[%L]:%-2v'}
-
-function! LightlineModified()
-	return &ft =~ 'help\|vimfiler\|gundo' ? '' : &modified ? '+' : &modifiable ? '' : '-'
-endfunction
-
-function! LightlineReadonly()
-	return &ft !~? 'help\|vimfiler\|gundo' && &readonly ? 'x' : ''
-endfunction
-
-function! LightlineFilename()
-	return ('' != LightlineReadonly() ? LightlineReadonly() . ' ' : '') .
-		\ (&ft == 'vimfiler' ? vimfiler#get_status_string() :
-		\  &ft == 'unite' ? unite#get_status_string() :
-		\  &ft == 'vimshell' ? vimshell#get_status_string() :
-		\ '' != expand('%:t') ? expand('%:t') : '[No Name]') .
-		\ ('' != LightlineModified() ? ' ' . LightlineModified() : '')
-endfunction
-
-function! LightlineFugitive()
-	if &ft !~? 'vimfiler\|gundo' && exists('*fugitive#head')
-		return fugitive#head()
-	else
-		return ''
-	endif
-endfunction
-
-function! LightlineFileformat()
-	return winwidth(0) > 70 ? &fileformat : ''
-endfunction
-
-function! LightlineFiletype()
-	return winwidth(0) > 70 ? (&filetype !=# '' ? &filetype : 'no ft') : ''
-endfunction
-
-function! LightlineFileencoding()
-	return winwidth(0) > 70 ? (&fenc !=# '' ? &fenc : &enc) : ''
-endfunction
-
-function! LightlineMode()
-	return winwidth(0) > 60 ? lightline#mode() : ''
-endfunction
