@@ -161,9 +161,19 @@ call plug#begin('~/.vim/plugged')
 " Program language Rust
 Plug 'rust-lang/rust.vim'
 Plug 'racer-rust/vim-racer'
+
 Plug 'Shougo/unite.vim'
 Plug 'Shougo/vimfiler'
 " color code view
 "Plug 'lilydjwg/colorizer'
+" airline
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
+"colorscheme
+Plug 'morhetz/gruvbox'
 
 call plug#end()
+
+let g:airline_powerline_font=1
+let g:airline_theme='gruvbox'
