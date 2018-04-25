@@ -12,12 +12,12 @@ set noexpandtab "expandtab is insert a space instead of tab
 set softtabstop=4 "amount of the inserted space by expandtab
 
 set laststatus=2 "always display the status line
+set noshowmode
 
 if !has('gui_running')
 	set t_Co=256
 endif
 
-set noshowmode
 
 set encoding=utf-8 "setting of internal character code
 set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8 "setting the character code at the time of writing files
@@ -33,6 +33,7 @@ set smartcase "lower case -> ignored, large case -> normal search
 set matchtime=2
 set wrapscan "
 
+set ambiwidth=double
 
 syntax on
 
@@ -66,10 +67,10 @@ nnoremap sH <C-w>H
 filetype on
 autocmd BufNewFile,BufReadPost *.ino,*.pde set filetype=cpp
 
-"if has('persistent_undo')
-"    set undodir=~/.vim/undo
-"    set undofile
-"endif
+if has('persistent_undo')
+    set undodir=~/.vim/undo
+    set undofile
+endif
 
 "if has("autocmd")
 "    au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
@@ -90,11 +91,17 @@ imap <> <><left>
 "hi CFunction guifg=#ff0000 guibg=#ffff00 
 
 "colorscheme peachpuff
+colorscheme gruvbox
 
 set incsearch
 set wildmenu wildmode=list:full
 
-hi Comment ctermfg=gray
+"hi Comment ctermfg=gray
+
+"highlight StatusLine guifg=darkblue guibg=darkyellow gui=none ctermfg=blue ctermbg=yellow cterm=none
+"highlight statusline   term=NONE cterm=NONE guifg=red ctermfg=yellow ctermbg=red
+
+set t_Co=256
 
 autocmd BufWinLeave ?* silent mkview
 autocmd BufWinEnter ?* silent loadview
@@ -137,7 +144,8 @@ cabbr w!! w !sudo tee > /dev/null %
 " http://d.hatena.ne.jp/akishin999/20130928/1380373262
 scriptencoding utf-8
 "set guifont=Ricty\ 10
-set guifont=Ricty\ for\ Powerline:h18
+"set guifont=Ricty\ for\ Powerline:h18
+set guifont=Source\ Code\ Pro\ for\ Powerline:h18
 
 " install pulgin manager ->
 " $curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
