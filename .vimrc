@@ -20,7 +20,7 @@ endif
 
 
 set encoding=utf-8 "setting of internal character code
-set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8 "setting the character code at the time of writing files
+set fileencodings=utf-8,iso-2022-jp,euc-jp,sjis "setting the character code at the time of writing files
 set fileformats=unix,dos,mac "automatic recognition of the line feed code
 
 set list "display of the tab and indentation
@@ -38,7 +38,10 @@ set ambiwidth=double
 "syntax on
 syntax enable
 
-set nohlsearch
+" highlight
+set hlsearch
+nnoremap <ESC><ESC> :nohlsearch<CR>
+
 set cursorline
 
 " screen split
@@ -128,6 +131,10 @@ set foldmethod=marker "folding of the line /*{{{*/ /*}}}*/
 
 nnoremap ; :
 
+" urxvt setting
+map [1;2C <S-Right>
+map [1;2D <S-Left>
+
 " tab
 ab nt tabnew
 nnoremap <S-Left> gT
@@ -146,7 +153,7 @@ cabbr w!! w !sudo tee > /dev/null %
 scriptencoding utf-8
 "set guifont=Ricty\ 10
 "set guifont=Ricty\ for\ Powerline:h18
-set guifont=Source\ Code\ Pro\ for\ Powerline:h18
+set guifont=Source\ Code\ Pro\ for\ Powerline\ Regular:h18
 
 " install pulgin manager ->
 " $curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -175,5 +182,24 @@ Plug 'morhetz/gruvbox'
 
 call plug#end()
 
-let g:airline_powerline_font=1
+" air-line settings
+let g:airline_powerline_fonts=1
+"let g:airline#extensions#tabline#enabled = 1
+"let g:airline#extensions#tabline#buffer_idx_mode = 1
+"let g:airline#extensions#whitespace#mixed_indent_algo = 1
 let g:airline_theme='gruvbox'
+
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+
+
+" swap one char
+inoremap <C-t> <Esc><Left>"za"zpa
+
+" del register
+nnoremap x "_x
+nnoremap s "_s
+
+" continuous  paset
+xnoremap <expr> p 'pgv"'.v:register.'y`>'
