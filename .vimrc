@@ -97,6 +97,13 @@ imap <> <><left>
 "colorscheme peachpuff
 colorscheme gruvbox
 
+" permeate
+highlight Normal ctermbg=NONE guibg=NONE
+highlight NonText ctermbg=NONE guibg=NONE
+highlight SpecialKey ctermbg=NONE guibg=NONE
+highlight EndOfBuffer ctermbg=NONE guibg=NONE
+
+
 set incsearch
 set wildmenu wildmode=list:full
 
@@ -183,7 +190,7 @@ Plug 'morhetz/gruvbox'
 call plug#end()
 
 " air-line settings
-let g:airline_powerline_fonts=1
+
 "let g:airline#extensions#tabline#enabled = 1
 "let g:airline#extensions#tabline#buffer_idx_mode = 1
 "let g:airline#extensions#whitespace#mixed_indent_algo = 1
@@ -192,6 +199,21 @@ let g:airline_theme='gruvbox'
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
+
+" use left separator
+"let g:airline_left_sep = '⮀'
+"let g:airline_left_alt_sep = '⮁'
+" use fight separator
+"let g:airline_right_sep = '⮂'
+"let g:airline_right_alt_sep = '⮃'
+"let g:airline_symbols.crypt = '🔒'
+"let g:airline_symbols.linenr = '¶'
+"let g:airline_symbols.maxlinenr = '㏑' "row
+"let g:airline_symbols.branch = '⭠'
+"let g:airline_symbols.paste = 'ρ'
+"let g:airline_symbols.spell = 'Ꞩ'
+"let g:airline_symbols.notexists = '∄'
+"let g:airline_symbols.whitespace = 'Ξ'
 
 
 " swap one char
