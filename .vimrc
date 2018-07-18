@@ -95,13 +95,14 @@ imap <> <><left>
 "hi CFunction guifg=#ff0000 guibg=#ffff00 
 
 "colorscheme peachpuff
+set background=dark
 colorscheme gruvbox
 
 " permeate
-highlight Normal ctermbg=NONE guibg=NONE
-highlight NonText ctermbg=NONE guibg=NONE
-highlight SpecialKey ctermbg=NONE guibg=NONE
-highlight EndOfBuffer ctermbg=NONE guibg=NONE
+"highlight Normal ctermbg=NONE guibg=NONE
+"highlight NonText ctermbg=NONE guibg=NONE
+"highlight SpecialKey ctermbg=NONE guibg=NONE
+"highlight EndOfBuffer ctermbg=NONE guibg=NONE
 
 
 set incsearch
@@ -201,19 +202,19 @@ if !exists('g:airline_symbols')
 endif
 
 " use left separator
-"let g:airline_left_sep = '⮀'
-"let g:airline_left_alt_sep = '⮁'
+let g:airline_left_sep = '⮀'
+let g:airline_left_alt_sep = '⮁'
 " use fight separator
-"let g:airline_right_sep = '⮂'
-"let g:airline_right_alt_sep = '⮃'
-"let g:airline_symbols.crypt = '🔒'
-"let g:airline_symbols.linenr = '¶'
-"let g:airline_symbols.maxlinenr = '㏑' "row
-"let g:airline_symbols.branch = '⭠'
-"let g:airline_symbols.paste = 'ρ'
-"let g:airline_symbols.spell = 'Ꞩ'
-"let g:airline_symbols.notexists = '∄'
-"let g:airline_symbols.whitespace = 'Ξ'
+let g:airline_right_sep = '⮂'
+let g:airline_right_alt_sep = '⮃'
+let g:airline_symbols.crypt = '🔒'
+let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.maxlinenr = '㏑'
+let g:airline_symbols.branch = '⭠'
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.spell = 'Ꞩ'
+let g:airline_symbols.notexists = '∄'
+let g:airline_symbols.whitespace = 'Ξ'
 
 
 " swap one char
