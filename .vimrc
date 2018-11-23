@@ -144,7 +144,7 @@ map [1;2C <S-Right>
 map [1;2D <S-Left>
 
 " tab
-ab nt tabnew
+ca nt tabnew
 nnoremap <S-Left> gT
 nnoremap <S-Right> gt
 
